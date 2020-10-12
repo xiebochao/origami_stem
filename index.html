@@ -1,188 +1,196 @@
-<!DOCTYPE html>
+<!DOCTYPE html">
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>视频播放详情</title>
-  <link href="css/whir_common.css" rel="stylesheet" type="text/css" />
-  <link href="css/whir_style.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>折纸视频</title>
+    <link href="css/whir_common.css" rel="stylesheet" type="text/css" />
+    <link href="css/whir_home.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="script/jquery1.42.min.js"></script>
+    <script type="text/javascript" src="script/jquery.SuperSlide.2.1.1.js"></script>
+  </head>
+  <body>
   <!--头部-->
-  <div id="header">
-    <div class="top">
-      <div class="topmain">
-        <div class="searchbox">
-          <div class="so_so">
-            <div class="logo"><a href="#" title="折纸网"><img src="images/logo.jpg" width="300" height="70"/ alt="折纸网"></a></div>
-            <div class="mk_so">
-              <input type="text" class="input"  name=""/>
-              <input type="image" src="images/btn.jpg" class="btn" />
-            </div>
-          </div>
-          <div class="topmenu">
-            <div class="xsyd"><a href="#" target="_blank">新手引导</a></div>
-            <div class="hylist">
-              <ul>
-                <li class="li2"><a href="javascript:void(0);" onclick="showA();">注册</a>/<a href="javascript:void(0);" onclick="showB();">登陆</a></li>
-                <li class="li4"><a href="#">收藏我们</a></li>
-              </ul>
-            </div>
-                  <!--注册登录隐藏--->
+    <div class="head">
+      <div class="headm">
+        <!--登陆后显示会员-->
+        <div class="member">
+          <div class="huiyuan"><ul><li class="hy2"><a href="javascript:void(0);" onclick="showA();">注册</a></li></ul>
             <div id="pop" class="pop" style="display:none"> 
               <div class="pop_head"><a href="javascript:void(0);" onclick="hideA()">关闭</a></div> 
               <div class="pop_body">
                 <h1>用户注册</h1>
                 <div class="zhuce">
-                  <input type="text" class="inputl" value="请输入真实邮箱" onFocus="this.value='';" onBlur="if(this.value==''){this.value='请输入真实邮箱';}" />
-                  <input type="text" class="inputr" value="请输入用户名" onFocus="this.value='';" onBlur="if(this.value==''){this.value='请输入用户名';}" />
-                  <input type="password" class="inputb" value="请输入密码" onFocus="this.value='';" onBlur="if(this.value==''){this.value='请输入密码';}" />
-                  <div class="dlk"><a href="#" class="regist">注册</a><a href="#" class="login">返回登录</a></div>
-                </div>
-              </div> 
+                <input type="text" class="inputl" value="请输入真实邮箱" onFocus="this.value='';" onBlur="if(this.value==''){this.value='请输入真实邮箱';}" />
+                <input type="text" class="inputr" value="请输入用户名" onFocus="this.value='';" onBlur="if(this.value==''){this.value='请输入用户名';}" />
+                <input type="password" class="inputb" value="请输入密码" onFocus="this.value='';" onBlur="if(this.value==''){this.value='请输入密码';}" />
+                <div class="dlk"><a href="#" class="regist">注册</a><a href="#" class="login">返回登录</a></div>
+              </div>
             </div> 
-
-            <div id="pop1" class="pop1" style="display:none"> 
-              <div class="pop_head1"><a href="javascript:void(expression);" onclick="hideB()">关闭</a></div> 
-              <div class="pop_body1">
-                <h1>用户登陆</h1>
-                <div class="zhuce">
-                  <input type="text" class="inputr" value="请输入用户名"  onFocus="this.value='';" onBlur="if(this.value==''){this.value='请输入用户名';}"/>
-                  <input type="password" class="inputb" value="请输入密码" onFocus="this.value='';" onBlur="if(this.value==''){this.value='请输入密码';}" />
-                  <div class="dlk"><a href="#" class="regist">登陆</a><a href="#" class="login">注册</a></div>
-                </div>
-              </div> 
-            </div>
-
+          </div> 
         </div>
       </div>
-        <!--菜单导航-->
-        <div class="topnavmenu">
-          <div class="nav">
-            <ul>
-              <li><a href="index.html" class="on">首页</a></li>
-              <li><a href="###">啥啥啥</a></li>
-              <li><a href="###">啥啥啥</a></li>
-              <li><a href="###">啥啥啥</a></li>
-              <li><a href="###">啥啥啥</a></li>
-              <li><a href="###">啥啥啥</a></li>
-              <li><a href="###">啥啥啥</a></li>
-              <li><a href="###">啥啥啥</a></li>
-              <li><a href="###">啥啥啥</a></li>
-            </ul>
-          </div>
-          <div class="question">
-            <ul>
-              <li class="li6"><a href="###">我要提问</a></li>
-              <li class="li7"><a href="###">我要问答</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="clear"></div>
-  <!--container-->
-  <div class="player_container">
-    <div class="mod_crumbs"> <a href="#" target="_blank"title="首页">首页</a>&gt; <a href="javascript:;" target="_blank" title="折纸时代">折纸时代</a> </div>
-    <h1 class="mod_player_title" title="折纸时代">折纸时代</h1>
-    <!--视频播放及相关视频-->
-    <div class="mod_player_section cf" id="mod_inner">
-
-      <div class="mod_player" id="mod_player">
-        <video width="856" height="519" controls>
-          <source src="video/1.mp4" type="video/mp4">
-          <source src="video/1.ogg" type="video/ogg">
-          <source src="video/1.webm" type="video/webm">
-          <object data="video/1.mp4" width="856" height="519">
-            <embed src="video/1.swf" width="856" height="519">
-          </object>
-        </video> 
-      </div>
-
-      <div class="mod_video_album_section mod_video_album_section_v3" id="fullplaylist">
-        <div class="mod_video_list_section ui_scroll_box mod_video_list_section_2">
-          <div class="mod_video_list_content ui_scroll_content" id="mod_videolist">
-            <div class="album_title">
-              <h1>相关视频</h1>
-            </div>
-            <ul>
-              <li class="item"> <a class="item_link" href="#" title="折纸小课" > 
-                <span class="album_pic"> <img width="117px" height="65px" src="images/playimg.jpg" alt="折纸小课"> <span class="figure_mask"> <em class="mask_txt">01:06</em> </span> </span>
-                <div class="video_title"><strong>折纸小课</strong><br />
-                  播放：12556次<br />
-                  评论：1554次</div>
-                </a> 
-              </li>
-              <li class="item"> <a class="item_link" href="#" title="折纸小课" > 
-                <span class="album_pic"> <img width="117px" height="65px" src="images/playimg.jpg" alt="折纸小课"> <span class="figure_mask"> <em class="mask_txt">01:06</em> </span> </span>
-                <div class="video_title"><strong>折纸小课</strong><br />
-                  播放：12556次<br />
-                  评论：1554次</div>
-                </a> 
-              </li>
-              <li class="item"> <a class="item_link" href="#" title="折纸小课" > 
-                <span class="album_pic"> <img width="117px" height="65px" src="images/playimg.jpg" alt="折纸小课"> <span class="figure_mask"> <em class="mask_txt">01:06</em> </span> </span>
-                <div class="video_title"><strong>折纸小课</strong><br />
-                  播放：12556次<br />
-                  评论：1554次</div>
-                </a> 
-              </li>
-              <li class="item"> <a class="item_link" href="#" title="折纸小课" > 
-                <span class="album_pic"> <img width="117px" height="65px" src="images/playimg.jpg" alt="折纸小课"> <span class="figure_mask"> <em class="mask_txt">01:06</em> </span> </span>
-                <div class="video_title"><strong>折纸小课</strong><br />
-                  播放：12556次<br />
-                  评论：1554次</div>
-                </a> 
-              </li>
-              <li class="item"> <a class="item_link" href="#" title="折纸小课" > 
-                <span class="album_pic"> <img width="117px" height="65px" src="images/playimg.jpg" alt="折纸小课"> <span class="figure_mask"> <em class="mask_txt">01:06</em> </span> </span>
-                <div class="video_title"><strong>折纸小课</strong><br />
-                  播放：12556次<br />
-                  评论：1554次</div>
-                </a> 
-              </li>
-              <li class="item"> <a class="item_link" href="#" title="折纸小课" > 
-                <span class="album_pic"> <img width="117px" height="65px" src="images/playimg.jpg" alt="折纸小课"> <span class="figure_mask"> <em class="mask_txt">01:06</em> </span> </span>
-                <div class="video_title"><strong>折纸小课</strong><br />
-                  播放：12556次<br />
-                  评论：1554次</div>
-                </a> 
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--点赞-->
-    <div class="agree"> <span class="dzsc"><a href="#" class="dianz">80</a><a href="#" class="kdsc">收藏</a></span> <span class="fenx">
-      <div class="bshare-custom icon-medium">
-        <div class="bsPromo bsPromo2"></div>
-        <a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div>
-      <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
-      <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
-      </span> <span class="cishu"><img src="images/gkcs.jpg" />&nbsp;&nbsp;4.245播放</span> <span style="float:right; margin-top:30px;">
-      <input type="image" src="images/xxbj.jpg" style="float:left;" />
-      </span> 
-    </div>
-    <!--视频简介-->
-    <div class="playerjj">
+      <!--快捷导航-->
+      <div class="kjnav">
       <ul>
-        <li>
-          <div class="upinfo">
-            <h1>视频简介:</h1>
-            <p>这是一条视频简介。这是一条视频简介。这是一条视频简介。这是一条视频简介。这是一条视频简介。这是一条视频简介。这是一条视频简介。这是一条视频简介。这是一条视频简介。这是一条视频简介。这是一条视频简介。这是一条视频简介。</p>
-            <span>9小时前 上传</span> 
-          </div>
-        </li>
+        <li class="navli2"><a href="#">收藏我们</a></li>
+        <li class="navli3"><a href="#">新手引导</a></li>
       </ul>
     </div>
-  </div>
-  <div class="clear"></div>
-  
-  <div class="clear"></div>
-  
-  <div class="copyright">
-    <div class="copy">Copyright © 2020 HRY
-  </div>
-</body>
+    </div>
+    </div>
+    <div id="header">
+      <div class="top">
+        <div class="topmain">
+          <div class="searchbox">
+            <div class="so_so">
+              <div class="logo"><a href="#" title="折纸网"><img src="images/logo.png"  width="105" height="75" style="margin: 10px 0px 35px 60px;"/ alt="折纸网" ></a></div>
+              <div class="mk_so">
+                <input type="text" class="input"  name=""/>
+                <input type="image" src="images/btn.jpg" class="btn"/>
+              </div>
+            </div>
+            
+          </div>
+          <!--菜单导航-->
+          <div class="topnavmenu">
+            <div class="nav">
+              <ul>
+                <li><a href="index.html" class="on">首页</a></li>
+                <li><a href="class1.html">课程详情</a></li>
+              </ul>
+            </div>
+            <div class="question">
+              <ul>
+                <li class="li6"><a href="###">我要提问</a></li>
+                <li class="li7"><a href="###">我要问答</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--底部-->
+    <div class="clear"></div>
+    <!--公告-->
+    <div class="notice">
+      <h1>公告栏：</h1>
+      <div class="txtMarquee-left">
+        <div class="bd">
+          <ul class="infoList">
+            <li><a href="#" target="_blank">这是一条公告</a><span>[11-11]</span></li>
+            <li><a href="#" target="_blank">这是一条公告</a><span>[11-11]</span></li>
+            <li><a href="#" target="_blank">这是一条公告</a><span>[11-11]</span></li>
+            <li><a href="#" target="_blank">这是一条公告</a><span>[11-11]</span></li>
+            <li><a href="#" target="_blank">这是一条公告</a><span>[11-11]</span></li>
+            <li><a href="#" target="_blank">这是一条公告</a><span>[11-11]</span></li>
+          </ul>
+        </div>
+        <div class="hd"> <a class="next"></a> <a class="prev"></a> </div>
+      </div>
+      <script type="text/javascript">
+        jQuery(".txtMarquee-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:2,interTime:50});
+        </script>
+    </div>
+    
+    
+    <!--内容简介-->
+    <div class="column1">
+      <div class="original">
+        <!--内容简介-->
+        <div class="oricolumn">
+          <div class="title2">
+            <h1>内容简介</h1>
+          </div>
+          <p class="jianjie">
+            传统折纸是艺术取向的手工活动，而本书对折纸的定位不简单是一种手工活动，更是融合了科学、技术、工程、数学等相关学科的一种STEM教育活动。本书以组织学生进行营地旅行为故事线索，按照宿营准备、布置营地、科学探索和宿营留念这四个阶段设计折纸活动，每个活动都明确指向要解决的实际问题或要实现的具体功能，既有专业知识内涵，又有应用研究外延，既可以灵动手指，又可以激活灵感，发展问题解决的创新思维。
+          </p>
+        </div> 
+      </div>
+    </div>
+    <!--视频列表-->
+    <div class="classes">
+      <div class="picScroll-left">
+        <div class="hd">
+          <h1>人气视频</h1>
+        </div>
+        <div class="bd">
+          <ul class="picList">
+            <li>
+              <div class="pic"><a href="class1.html" target="_blank"><img src="images/class/class1.jpg" width="221" height="194"/></a></div>
+              <div class="titlei"><span class="classtitle"><a href="class1.html" target="_blank">第一课</a></span><span class="classinfo">学生数：<a href="class1.html">10255</a>人  讲师：<a href="#">刘鹏飞</a></span></div>
+            </li>
+            <li>
+              <div class="pic"><a href="class2.html" target="_blank"><img src="images/class/class2.jpg" /></a></div>
+              <div class="titlei"><span class="classtitle"><a href="class2.html" target="_blank">第二课</a></span><span class="classinfo">学生数：<a href="class2.html">10255</a>人  讲师：<a href="#">刘鹏飞</a></span></div>
+            </li>
+            <li>
+              <div class="pic"><a href="class3.html" target="_blank"><img src="images/class/class3.jpg" /></a></div>
+              <div class="titlei"><span class="classtitle"><a href="class3.html" target="_blank">第三课</a></span><span class="classinfo">学生数：<a href="class3.html">10255</a>人  讲师：<a href="#">刘鹏飞</a></span></div>
+            </li>
+            <li>
+              <div class="pic"><a href="class4.html" target="_blank"><img src="images/class/class4.jpg" /></a></div>
+              <div class="titlei"><span class="classtitle"><a href="class4.html" target="_blank">第四课</a></span><span class="classinfo">学生数：<a href="class4.html">10255</a>人  讲师：<a href="#">刘鹏飞</a></span></div>
+            </li>
+            <li>
+              <div class="pic"><a href="class5.html" target="_blank"><img src="images/class/class5.jpg" /></a></div>
+              <div class="titlei"><span class="classtitle"><a href="class5.html" target="_blank">第五课</a></span><span class="classinfo">学生数：<a href="class5.html">10255</a>人  讲师：<a href="#">刘鹏飞</a></span></div>
+            </li>
+          </ul>
+        </div> 
+      </div>
+    </div>
+
+    <div class="classes">
+      <div class="picScroll-left">
+        <div class="bd">
+          <ul class="picList">
+            <li>
+              <div class="pic"><a href="class6.html" target="_blank"><img src="images/class/class6.jpg" width="221" height="194"/></a></div>
+              <div class="titlei"><span class="classtitle"><a href="class6.html" target="_blank">第六课</a></span><span class="classinfo">学生数：<a href="class6.html">10255</a>人  讲师：<a href="#">刘鹏飞</a></span></div>
+            </li>
+            <li>
+              <div class="pic"><a href="class7.html" target="_blank"><img src="images/class/class7.jpg" /></a></div>
+              <div class="titlei"><span class="classtitle"><a href="class7.html" target="_blank">第七课</a></span><span class="classinfo">学生数：<a href="class7.html">10255</a>人  讲师：<a href="#">刘鹏飞</a></span></div>
+            </li>
+            <li>
+              <div class="pic"><a href="class8.html" target="_blank"><img src="images/class/class8.jpg" /></a></div>
+              <div class="titlei"><span class="classtitle"><a href="class8.html" target="_blank">第八课</a></span><span class="classinfo">学生数：<a href="class8.html">10255</a>人  讲师：<a href="#">刘鹏飞</a></span></div>
+            </li>
+            <li>
+              <div class="pic"><a href="class9.html" target="_blank"><img src="images/class/class9.jpg" /></a></div>
+              <div class="titlei"><span class="classtitle"><a href="class9.html" target="_blank">第九课</a></span><span class="classinfo">学生数：<a href="class9.html">10255</a>人  讲师：<a href="#">刘鹏飞</a></span></div>
+            </li>
+            <li>
+              <div class="pic"><a href="class10.html" target="_blank"><img src="images/class/class10.jpg" /></a></div>
+              <div class="titlei"><span class="classtitle"><a href="class10.html" target="_blank">第十课</a></span><span class="classinfo">学生数：<a href="class10.html">10255</a>人  讲师：<a href="#">刘鹏飞</a></span></div>
+            </li>
+          </ul>
+        </div> 
+      </div>
+    </div>
+
+    <div class="classes">
+      <div class="picScroll-left" style="margin-top: -50;">
+        <div class="bd">
+          <ul class="picList">
+            <li>
+              <div class="pic"><a href="class11.html" target="_blank"><img src="images/class/class11.jpg" width="221" height="194"/></a></div>
+              <div class="titlei"><span class="classtitle"><a href="class11.html" target="_blank">第十一课</a></span><span class="classinfo">学生数：<a href="class11.html">10255</a>人  讲师：<a href="#">刘鹏飞</a></span></div>
+            </li>
+            <li>
+              <div class="pic"><a href="class12.html" target="_blank"><img src="images/class/class12.jpg" /></a></div>
+              <div class="titlei"><span class="classtitle"><a href="class12.html" target="_blank">第十二课</a></span><span class="classinfo">学生数：<a href="class12.html">10255</a>人  讲师：<a href="#">刘鹏飞</a></span></div>
+            </li>
+          </ul>
+        </div> 
+      </div>
+    </div>
+    
+    <div class="clear"></div>
+    
+    <div class="copyright">
+      <div class="copy">Copyright © 2020 HRY
+    </div>
+
+  </body>
 </html>
